@@ -1,0 +1,151 @@
+﻿/*--- # Header ---*/
+#header {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 120px;
+  z-index: 997;
+  overflow-y: auto;
+}
+
+#header * {
+  transition: ease-in-out 0.3s;
+}
+
+#header h1 {
+  font-size: 26px;
+  margin: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Poppins", serif;
+}
+
+#header h1 a,
+#header h1 a:hover {
+  color: #fff;
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  #header h1 {
+    font-size: 26px;
+  }
+}
+
+/*--- # Sections General ---*/
+section {
+  overflow: hidden;
+  width: 100%;
+  bottom: 100%;
+  z-index: 1;
+}
+
+section.section-show {
+  bottom: auto;
+  opacity: 1;
+  padding-bottom: 45px;
+}
+
+section .container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #061ef0;
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/*--- # Customer ---*/
+.customer .btn {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.3);
+  padding: 7px 16px;
+  border-radius: 0 14px;
+  transition: all ease-in-out 0.3s;
+  color: #fff;
+}
+
+.customer .btn:hover {
+  background: #394dfd;
+  border-color: #061ef0;
+}
+
+.customer table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.customer th {
+  font-size: 20px;
+}
+
+.customer th,
+td {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.customer tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.customer .modal-header .close {
+  margin: 2px;
+  background: rgba(204, 204, 204, 0.3);
+  color: #fff;
+}
+
+.customer .modal-header .close:hover {
+  background: #394dfd;
+  border-color: #061ef0;
+}
+
+.customer .modal-content {
+  background-color: rgba(53, 50, 50, 0.986);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.493);
+}
+
+.customer .input-group {
+  font-size: 15px;
+}
+
+/*--- # Footer ---*/
+#footer .social-links a {
+  font-size: 16px;
+  color: #356ee8;
+  margin: 8px;
+}
+
+#footer .social-links a:hover {
+  color: #fff;
+}

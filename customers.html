@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Customers || Details</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link href="assets/img/sym.jpg" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/customer.css" rel="stylesheet">
+
+</head>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="home.html">The Bank</a></h1>
+            </div>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link" href="home.html">Home</a></li>
+                    <li><a class="nav-link active" href="#customer">Customer</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="customer" class="customer">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer</h2>
+                <p>Details</p>
+            </div>
+
+            <div class="text-center">
+                <h2>Default Account</h2>
+                <h3>Net Bank Balance : ₹<span id="myAccountBalance">100000</span></h3>
+        
+                <button class="btn" data-toggle="modal" data-target="#sendMoney">Transfer Money</button>
+                <button class="btn" data-toggle="modal" data-target="#transactionHistory">View Transactions</button>
+            </div>
+        
+            <!-- Modal send money -->
+            <div class="modal" id="sendMoney" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Proceed for transaction</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="input-group mb-3">
+                                    <label for="customers" class="input-group">Receiver :</label>
+                                    <select id="receiver" name="customer">
+                                        <option value="select">select---</option>                                        
+                                        <option value="alpesh">Alpesh</option>
+                                        <option value="babita">Babita</option>
+                                        <option value="dipu">Dipu</option>
+                                        <option value="jalpesh">Jalpesh</option>
+                                        <option value="kavita">Kavita</option>
+                                        <option value="madhav">Madhav</option>
+                                        <option value="nitish">Nitish</option>
+                                        <option value="osman">Osman</option>
+                                        <option value="twinkle">Twinkle</option>
+                                        <option value="uvesh">Uvesh</option>
+                                    </select>
+                                    
+                                    <div class="input-group-append">
+                                        <span id="basic-addon2"> @gmail.com</span>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <label for="customers" class="input-group">Sender :</label>
+                                    <select id="sender" name="customer">
+                                        <option value="select">select---</option>
+                                        <option value="alpesh">Alpesh</option>
+                                        <option value="babita">Babita</option>
+                                        <option value="dipu">Dipu</option>
+                                        <option value="jalpesh">Jalpesh</option>
+                                        <option value="kavita">Kavita</option>
+                                        <option value="madhav">Madhav</option>
+                                        <option value="nitish">Nitish</option>
+                                        <option value="osman">Osman</option>
+                                        <option value="twinkle">Twinkle</option>
+                                        <option value="uvesh">Uvesh</option>
+                                    </select>
+                                    
+                                    <div class="input-group-append">
+                                        <span id="basic-addon2">@gmail.com</span>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <label for="account" class="input-group">Bank Account :</label>
+                                    <select id="enterName" name="customer">
+                                        <option value="select">select---</option>                                        
+                                        <option value="defaultaccount">Default Account</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="quantity">Amount :</label>
+                                    <input type="text" id="enterAmount" name="quantity" min="500" placeholder="₹ Enter Amount .00" aria-label="Amount (to the nearest rupees)">
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="btn" class="btn" data-dismiss="modal">Close</button>
+                            <button type="btn" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send Money</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal transaction History-->
+            <div class="modal" id="transactionHistory" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Transaction History</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <ol id="transaction-history">
+                                
+                            </ol>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table  -->
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>Bank Balance(in Rs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alpesh</td>
+                                <td>alpesh@gmail.com</td>
+                                <td>₹<p id="alpeshBankBalance">10000</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Babita</td>
+                                <td>babita@gmail.com</td>
+                                <td>₹<p id="babitaBankBalance">14000</p></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Dipu</td>
+                                <td>dipu@gmail.com</td>
+                                <td>₹<p id="dipuBankBalance">12000</p></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Jalpesh</td>
+                                <td>jalpesh@gmail.com</td>
+                                <td>₹<p id="jalpeshBankBalance">44000</p></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Kavita</td>
+                                <td>kavita@gmail.com</td>
+                                <td>₹<p id="kavitaBankBalance">93000</p></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Madhav</td>
+                                <td>madhav@gmail.com</td>
+                                <td>₹<p id="madhavBankBalance">10500</p></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Nitish</td>
+                                <td>nitish@gmail.com</td>
+                                <td>₹<p id="nitishBankBalance">56000</p></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Osman</td>
+                                <td>osman@gmail.com</td>
+                                <td>₹<p id="osmanBankBalance">35600</p></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Twinkle</td>
+                                <td>twinkle@gmail.com</td>
+                                <td>₹<p id="twinklekumariBankBalance">85000</p></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Uvesh</td>
+                                <td>uvesh@gmail.com</td>
+                                <td>₹<p id="uveshbelimBankBalance">50000</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/uttam.kotiya.39" class="github"><i class="bi bi-github"></i></a>          
+                <a href="https://www.linkedin.com/in/uttam-kotiya-2936751b0/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/UttamKotiya3" class="twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; Copyright 2021 <strong><span>The Bank</span></strong>.  All Rights Reserved
+            </div>
+    
+            <div class="credits">
+                Designed by <a href="">U_K</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
