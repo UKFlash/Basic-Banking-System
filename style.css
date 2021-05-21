@@ -40,9 +40,7 @@ h1 {
   font-family: "Raleway", serif;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/*--- # Header ---*/
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
@@ -138,12 +136,8 @@ h1 {
   }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation
-*/
+/*--- # Navigation Menu ---*/
+/* Desktop Navigation */
 .navbar {
   padding: 0;
   margin-top: 35px;
@@ -210,9 +204,7 @@ h1 {
   color: #fff;
 }
 
-/**
-* Mobile Navigation
-*/
+/* Mobile Navigation */
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -284,9 +276,7 @@ h1 {
   margin: 15px;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+/*--- # Footer ---*/
 #footer {
   position: fixed;
   right: 0;
